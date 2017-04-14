@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="gamepadExample" InternalType="">
+  <VirtualDirectory Name="wgois">
+    <VirtualDirectory Name="include">
+      <VirtualDirectory Name="linux">
+        <File Name="../libs/wgois/include/linux/LinuxPrereqs.h"/>
+        <File Name="../libs/wgois/include/linux/EventHelpers.h"/>
+        <File Name="../libs/wgois/include/linux/LinuxKeyboard.h"/>
+        <File Name="../libs/wgois/include/linux/LinuxForceFeedback.h"/>
+        <File Name="../libs/wgois/include/linux/LinuxMouse.h"/>
+        <File Name="../libs/wgois/include/linux/LinuxInputManager.h"/>
+        <File Name="../libs/wgois/include/linux/LinuxJoyStickEvents.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="win32">
+        <File Name="../libs/wgois/include/win32/Win32JoyStick.h"/>
+        <File Name="../libs/wgois/include/win32/Win32Mouse.h"/>
+        <File Name="../libs/wgois/include/win32/Win32Prereqs.h"/>
+        <File Name="../libs/wgois/include/win32/Win32InputManager.h"/>
+        <File Name="../libs/wgois/include/win32/Win32KeyBoard.h"/>
+        <File Name="../libs/wgois/include/win32/Win32ForceFeedback.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="mac">
+        <File Name="../libs/wgois/include/mac/MacPrereqs.h"/>
+        <File Name="../libs/wgois/include/mac/MacKeyboard.h"/>
+        <File Name="../libs/wgois/include/mac/MacJoyStick.h"/>
+        <File Name="../libs/wgois/include/mac/MacMouse.h"/>
+        <File Name="../libs/wgois/include/mac/MacHelpers.h"/>
+        <File Name="../libs/wgois/include/mac/MacInputManager.h"/>
+        <File Name="../libs/wgois/include/mac/MacHIDManager.h"/>
+      </VirtualDirectory>
+      <File Name="../libs/wgois/include/OISObject.h"/>
+      <File Name="../libs/wgois/include/OISForceFeedback.h"/>
+      <File Name="../libs/wgois/include/OISEffect.h"/>
+      <File Name="../libs/wgois/include/OISInterface.h"/>
+      <File Name="../libs/wgois/include/OISInputManager.h"/>
+      <File Name="../libs/wgois/include/OISFactoryCreator.h"/>
+      <File Name="../libs/wgois/include/OISException.h"/>
+      <File Name="../libs/wgois/include/OISKeyboard.h"/>
+      <File Name="../libs/wgois/include/OISMouse.h"/>
+      <File Name="../libs/wgois/include/OISEvents.h"/>
+      <File Name="../libs/wgois/include/OIS.h"/>
+      <File Name="../libs/wgois/include/OISConfig.h"/>
+      <File Name="../libs/wgois/include/OISPrereqs.h"/>
+      <File Name="../libs/wgois/include/OISMultiTouch.h"/>
+      <File Name="../libs/wgois/include/OISJoyStick.h"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0005Debug000000000000]]>
+    </Plugin>
+  </Plugins>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="src">
+    <File Name="src/gamepadExampleApp.cpp"/>
+    <File Name="src/gamepadExampleApp.h"/>
+    <File Name="src/main.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="config">
+    <File Name="Makefile"/>
+    <File Name="config.make"/>
+    <File Name="addons.make"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="ofxGamepad">
+    <File Name="../src/ofxGamepad.cpp"/>
+    <File Name="../src/ofxGamepad.h"/>
+    <File Name="../src/ofxGamepadHandler.cpp"/>
+    <File Name="../src/ofxGamepadHandler.h"/>
+    <File Name="../src/ofxGamepadLinux.cpp"/>
+    <File Name="../src/ofxGamepadLinux.h"/>
+    <File Name="../src/ofxGamepadConfigs.h"/>
+    <File Name="../src/ofxGamepadOIS.h"/>
+    <File Name="../src/ofxGamepadOIS.cpp"/>
+  </VirtualDirectory>
+  <Settings Type="Dynamic Library">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Dynamic Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g" C_Options="-g" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="" IntermediateDirectory="./Debug" Command="./example" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(ProjectPath)/bin" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[
+      ]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="yes">
+        <RebuildCommand/>
+        <CleanCommand>make clean</CleanCommand>
+        <BuildCommand>make</BuildCommand>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory>$(ProjectPath)</WorkingDirectory>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Dynamic Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="" C_Options="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="-O2" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="" IntermediateDirectory="./Release" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[
+      
+      
+      ]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="yes">
+        <RebuildCommand/>
+        <CleanCommand>make clean</CleanCommand>
+        <BuildCommand>make</BuildCommand>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory>$(WorkspacePath)</WorkingDirectory>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>
